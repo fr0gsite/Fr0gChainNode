@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  fr0gnode:
+    build: .
+    container_name: fr0gnode
+    ports:
+      - "8888:8888"
+      - "1001:1001"
+    env_file:
+      - .env
+    restart: unless-stopped
+    volumes:
+      - ./data:/usr/node/chaindata
+    command:
+      - /usr/node/init_node.sh

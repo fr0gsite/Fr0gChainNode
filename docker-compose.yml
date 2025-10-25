@@ -6,7 +6,7 @@ services:
     container_name: fr0gnode
     ports:
       - "8888:8888"
-      - "1001:1001"
+      - "9010:9010"
     env_file:
       - .env
     restart: unless-stopped
